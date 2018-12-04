@@ -55,7 +55,7 @@
 	<!--Homepage-->
 	<dict>
 		<key>Key</key><string>homePage</string>
-		<key>Value</key><string>https://bmls.cmq.io/pro</string>
+		<key>Value</key><string>https://bmls.cmq.io</string>
 	</dict>
 
 
