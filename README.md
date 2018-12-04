@@ -1,0 +1,2 @@
+# kioskpro
+Kiosk Pro config
