@@ -55,7 +55,7 @@
 	<!--Homepage-->
 	<dict>
 		<key>Key</key><string>homePage</string>
-		<key>Value</key><string>https://bmls.cmq.io</string>
+		<key>Value</key><string>https://bmls.cmq.io/pro</string>
 	</dict>
 
 
@@ -1266,13 +1266,13 @@
 		<!--Enable-->
 		<dict>
 			<key>Key</key><string>remoteSettingsEnabled</string>
-			<key>Value</key><false/>
+			<key>Value</key><true/>
 		</dict>
 	
 		<!--XML File Location-->
 		<dict>
 			<key>Key</key><string>externalSettingsFile</string>
-			<key>Value</key><string></string>
+			<key>Value</key><string>https://raw.githubusercontent.com/chronometriq/kioskpro/master/plus.xml</string>
 		</dict>
 	
 		<!--Update Period (minutes)-->
