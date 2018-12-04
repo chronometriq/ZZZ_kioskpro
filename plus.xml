@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>kioskSettings</key>
+<array>
+
+<!--Compatible with Kiosk Pro Plus 9.0.7, updated October 30th, 2018 -->
+
+<!--Instructions on using this .xml file to remotely control your iPad running Kiosk Pro can be found here: http://www.kioskproapp.com/xml-how-to -->
+	
+<!--Before making changes to this .xml file, please note the following:
+	1. Do not add spaces or line breaks before the first line of this file.
+	2. Any values with the tags <integer> or <real> cannot be left blank; they must have an entry. 
+	3. Ampersands ('&') are a reserved character in XML. If your url uses one, you will need to instead use the unit code "&amp;".
+	4. If you do not wish to control a specific setting remotely, you can delete the entire entry from (and including) the opening <dict> tag to (and including) the closing </dict> tag or comment the setting so that it is ignored (see below).-->
+
+<!--Commenting:
+	Certain key-value pairs below are commented out(and thus ignored) by default to prevent accidental overwrite of a manually entered string or because they are rarely used (as in our Advanced Settings at the bottom of the file). Commented pairs can be reenabled by moving the ending '- - >' (without spaces) from after the closing dict tag to the end of the descriptor line. -->
+
+	
+<!--Admin-->
+
+	<!--Show Settings: 0 = On App Launch, 1 = Never, 2 = On Touch Gesture and Passcode-->
+	<dict>
+		<key>Key</key><string>settingsShowingOption</string>
+		<key>Value</key><integer>0</integer>
+	</dict>
+
+	<!--Passcode (4 digit string)-->
+	<dict>
+		<key>Key</key><string>settingsPassCode</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Locking Device to Kiosk Pro-->
+			
+			<!--Autonomous Single App Mode-->
+					
+					<!--Autonomous Single App Mode: 0 = Lock Manually, 1 = Lock On App Launch-->
+					<dict>
+						<key>Key</key><string>autonomousSingleAppMode</string>
+						<key>Value</key><integer>0</integer>
+					</dict>
+					
+					<!--Passcode To Exit Autonomous Single App Mode (4 digit string)-->
+					<dict>
+						<key>Key</key><string>kp_passCodeToExitAutonomousSingleAppMode</string>
+						<key>Value</key><string></string>
+					</dict>
+
+
+<!--Content-->
+
+	<!--Homepage-->
+	<dict>
+		<key>Key</key><string>homePage</string>
+		<key>Value</key><string>https://bmls.cmq.io</string>
+	</dict>
+
+
+<!--Identification-->
+
+	<!--The following settings are commented out to prevent accidental overwrite of a kiosk identifier. See 'Commenting' at the top to enable. -->
+
+	<!--Unique iPad ID
+	<dict>
+		<key>Key</key><string>uniqueiPadID</string>
+		<key>Value</key><string></string>
+	</dict>
+	-->
+
+	<!--Group IDs-->
+
+		<!--Group ID 1
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_0</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+		<!--Group ID 2
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_1</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+		<!--Group ID 3
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_2</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+		<!--Group ID 4
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_3</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+		<!--Group ID 5
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_4</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+		<!--Group ID 6
+		<dict>
+			<key>Key</key><string>kp_substitutionVariableValue_5</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+
+
+<!--Display-->
+
+	<!--Show iPad Status Bar-->
+	<dict>
+		<key>Key</key><string>showStatusBar</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Show Address Bar-->
+	<dict>
+		<key>Key</key><string>showAddressBar</string>
+		<key>Value</key><false/>
+	</dict>
+	
+	<!--Allow Multiple Tabs-->
+	<dict>
+		<key>Key</key><string>kp_showMultipleTabs</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Navigation Bar Settings-->
+
+		<!--Show Navigation Bar-->
+
+			<!--With Standard Web Browser-->
+			<dict>
+				<key>Key</key><string>showWebBrowserNavigationBarLocal</string>
+				<key>Value</key><true/>
+			</dict>
+			<dict>
+				<key>Key</key><string>showWebBrowserNavigationBarRemote</string>
+				<key>Value</key><true/>
+			</dict>
+			
+			<!--With PDF Files-->
+			<dict>
+				<key>Key</key><string>showPdfFilesNavigationBarLocal</string>
+				<key>Value</key><true/>
+			</dict>
+			<dict>
+				<key>Key</key><string>showPdfFilesNavigationBarRemote</string>
+				<key>Value</key><true/>
+			</dict>
+			
+			<!--With Presentation Files-->
+			<dict>
+				<key>Key</key><string>showPresentationFilesNavigationBarLocal</string>
+				<key>Value</key><true/>
+			</dict>
+			<dict>
+				<key>Key</key><string>showPresentationFilesNavigationBarRemote</string>
+				<key>Value</key><true/>
+			</dict>
+			
+			<!--With Document Files-->
+			<dict>
+				<key>Key</key><string>showDocumentFilesNavigationBarLocal</string>
+				<key>Value</key><true/>
+			</dict>
+			<dict>
+				<key>Key</key><string>showDocumentFilesNavigationBarRemote</string>
+				<key>Value</key><true/>
+			</dict>
+			
+			<!--With Multimedia Files-->
+			<dict>
+				<key>Key</key><string>showMultimediaFilesNavigationBarLocal</string>
+				<key>Value</key><true/>
+			</dict>
+			<dict>
+				<key>Key</key><string>showMultimediaFilesNavigationBarRemote</string>
+				<key>Value</key><true/>
+			</dict>
+			
+		
+		<!--Show Icons-->
+		
+			<!--Show Home Icon-->
+			<dict>
+				<key>Key</key><string>showHomeIcon</string>
+				<key>Value</key><true/>
+			</dict>			
+			<!--Show Forward Icon-->
+			<dict>
+				<key>Key</key><string>showForwardIcon</string>
+				<key>Value</key><true/>
+			</dict>
+			
+			<!--Show Back Icon-->
+			<dict>
+				<key>Key</key><string>showBackIcon</string>
+				<key>Value</key><true/>
+			</dict>					
+			<!--Show PDF Multipage Icon-->
+			<dict>
+				<key>Key</key><string>showMultipageIcon</string>
+				<key>Value</key><true/>
+			</dict>
+		<!--Standard Icon Color (0 = Red, 1 = Yellow, 2 = Green, 3 = Blue, 4 = Light Grey, 5 = Dark Grey, 6 = Black, 7 = White)-->
+		<dict>
+			<key>Key</key><string>navBarIconsColorScheme</string>
+			<key>Value</key><string>4</string>
+		</dict>
+
+		<!--Standard Bar Background (RGB format)-->
+		<dict>
+			<key>Key</key><string>navBarBackgroundColor</string>
+			<key>Value</key><string>84,84,84</string>
+		</dict>
+
+		<!--Enable Custom Links-->
+		<dict>
+			<key>Key</key><string>customLinksEnabled</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!--Custom Link Settings-->
+
+			<!-- RGB Button Background Color
+			if blank, no button shape will be shown, only text-->
+			<dict>
+				<key>Key</key><string>clButtonBackgroundColor</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!--RGB Text Color-->
+			<dict>
+				<key>Key</key><string>clButtonTextColor</string>
+				<key>Value</key><string>255,255,255</string>
+			</dict>
+
+			<!--Custom Link 1-->
+			<dict>
+				<key>Key</key><string>clLabel1</string>
+				<key>Value</key><string>Custom Links</string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink1</string>
+				<key>Value</key><string>http://docs.kioskproapp.com/article/802-navigation-bar#custom-links</string>
+			</dict>
+
+			<!--Custom Link 2-->
+			<dict>
+				<key>Key</key><string>clLabel2</string>
+				<key>Value</key><string></string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink2</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!--Custom Link 3-->
+			<dict>
+				<key>Key</key><string>clLabel3</string>
+				<key>Value</key><string></string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink3</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!--Custom Link 4-->
+			<dict>
+				<key>Key</key><string>clLabel4</string>
+				<key>Value</key><string></string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink4</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!--Custom Link 5-->
+			<dict>
+				<key>Key</key><string>clLabel5</string>
+				<key>Value</key><string></string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink5</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!--Custom Link 6-->
+			<dict>
+				<key>Key</key><string>clLabel6</string>
+				<key>Value</key><string></string>
+			</dict>
+			<dict>
+				<key>Key</key><string>clLink6</string>
+				<key>Value</key><string></string>
+			</dict>
+
+	<!--Show Progress Indicator-->
+	<dict>
+		<key>Key</key><string>showLoadingProgress</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Loading & Default Background Color or Image (color in RGB format)-->
+	<dict>
+		<key>Key</key><string>pageReloadBackgroundColor</string>
+		<key>Value</key><string>255,255,255</string>
+	</dict>
+
+	<!--PDF Display Settings-->
+
+		<!--Show Thumbnails-->
+		<dict>
+			<key>Key</key><string>pdfShowThumbs</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!--Show Page Numbers-->
+		<dict>
+			<key>Key</key><string>pdfShowPageNumbers</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!--Background Color/Image (RGB format)-->
+		<dict>
+			<key>Key</key><string>pdfBackgroundImageFile</string>
+			<key>Value</key><string>0,0,0</string>
+		</dict>
+
+		<!--Page Transition Style: 0 = Scroll, 1 = Page Turn, 2 = Hyperlink Only-->
+		<dict>
+			<key>Key</key><string>pdfScrollingType</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+
+		<!--For Scroll & Hyperlink Only-->
+
+			<!--Scroll Orientation: 0 = Horizontal, 1 = Vertical -->
+			<dict>
+				<key>Key</key><string>pdfInfiniteScrollOrientation</string>
+				<key>Value</key><integer>0</integer>
+			</dict>
+
+			<!--Size to Fit: 0 = Horizontally, 1 = Vertically -->
+			<dict>
+				<key>Key</key><string>pdfSizeToFitOption</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+
+
+<!--Interaction-->		
+
+	<!--Disable Zoom-->
+
+		<!--with Standard Web Browser-->
+		<dict>
+			<key>Key</key><string>zoomDisabled</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!--with PDF Files (displayed in Scroll or Hyperlink Only Mode)-->
+		<dict>
+			<key>Key</key><string>pdfDisableZoom</string>
+			<key>Value</key><false/>
+		</dict>
+
+	<!--Disable Touch-->
+	<dict>
+		<key>Key</key><string>viewOnly</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Fix Window to Viewport-->
+	<dict>
+		<key>Key</key><string>disableWebViewBouncing</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!--Allow Text Selection for Accessibility-->
+	<dict>
+		<key>Key</key><string>textSelection</string>
+		<key>Value</key><false/>
+	</dict>
+
+
+<!--Timer Settings-->
+
+	<!--Idle Time Limit (seconds)-->
+	<dict>
+		<key>Key</key><string>idleTime</string>
+		<key>Value</key><string>60</string>
+	</dict>
+
+	<!--Show Idle Time Reset Alert-->
+	<dict>
+		<key>Key</key><string>idleTimeoutWarning</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Idle Time Reset Alert Text-->
+	<dict>
+		<key>Key</key><string>idleTimeoutWarningString</string>
+		<key>Value</key><string>Please touch the screen to continue your session.</string>
+	</dict>
+
+	<!--Refresh Homepage (minutes)-->
+	<dict>
+		<key>Key</key><string>refreshTime</string>
+		<key>Value</key><string>0</string>
+	</dict>
+
+	<!--Page Loading Time Limit (seconds)-->
+	<dict>
+		<key>Key</key><string>pageLoadTime</string>
+		<key>Value</key><string>60</string>
+	</dict>
+
+
+<!--Navigation-->
+
+	<!--Allowed Domains: separate multiple entries with semicolon ';' -->
+	<dict>
+		<key>Key</key><string>whiteList</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Restricted Domains: separate multiple entries with semicolon ';' -->
+	<dict>
+		<key>Key</key><string>blackList</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Apply Restrictions to Embedded Content-->
+	<dict>
+		<key>Key</key><string>kp_applyRestrictionsToEmbeddedContent</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!--Show Blocked Request Alert-->
+	<dict>
+		<key>Key</key><string>showSiteMessage</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!--Blocked Request Alert Text-->
+	<dict>
+		<key>Key</key><string>offDomainMessage</string>
+		<key>Value</key><string>Sorry, this site is not allowed.</string>
+	</dict>
+
+
+<!--Visitor Management-->
+
+	<!--Activation Mode-->
+	<dict>
+		<key>Key</key><string>activationMode</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Browsing Time Limit: -1 = Forever, 5 = 5 min, 10 = 10 min, etc. -->
+	<dict>
+		<key>Key</key><string>browseTime</string>
+		<key>Value</key><integer>-1</integer>
+	</dict>
+
+	<!--Good-Bye Page-->
+	<dict>
+		<key>Key</key><string>goodByePage</string>
+		<key>Value</key><string></string>
+	</dict>
+
+
+<!--Screensaver-->
+
+	<!--Enable-->
+	<dict>
+		<key>Key</key><string>sv_screenVideoEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Path to Local File or Folder-->
+	<dict>
+		<key>Key</key><string>sv_url2MovieFile</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Background Color-->
+	<dict>
+		<key>Key</key><string>kp_backgroundColorOfScreenSaverSlideShow</string>
+		<key>Value</key><string>0,0,0</string>
+	</dict>
+
+	<!--Image Duration (seconds)-->
+	<dict>
+		<key>Key</key><string>kp_updateIntervalOfScreenSaverSlideShow</string>
+		<key>Value</key><string>5</string>
+	</dict>
+
+	<!--Fade Duration (seconds)-->
+	<dict>
+		<key>Key</key><string>kp_fadeDurationOfScreenSaverSlideShow</string>
+		<key>Value</key><string>1</string>
+	</dict>
+
+	<!--Path to Overlay Image-->
+	<dict>
+		<key>Key</key><string>kp_screenSaverSlideShow_url2OverlayImage</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Overlay Transparency: decimal between 0 and 1, where 1 = no transparency-->
+	<dict>
+		<key>Key</key><string>kp_screenSaverSlideShow_overlayAlpha</string>
+		<key>Value</key><string>1</string>
+	</dict>
+
+
+<!--Power Management-->
+
+	<!--Enable Night Mode-->
+	<dict>
+		<key>Key</key><string>sleepSchedullerEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Schedule Night Mode-->
+	
+		<!--Note for the following: time_even number = wake, time_odd number = dim. For more information, please see http://www.kioskproapp.com/night-->
+
+		<!--Sleep Pair 1 -->
+		<dict>
+			<key>Key</key><string>time_0</string>
+			<key>Value</key><string>Daily 08:45</string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_1</string>
+			<key>Value</key><string>Daily 19:00</string>
+		</dict>
+
+		<!--Sleep Pair 2 -->
+		<dict>
+			<key>Key</key><string>time_2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_3</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 3 -->
+		<dict>
+			<key>Key</key><string>time_4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_5</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 4 -->
+		<dict>
+			<key>Key</key><string>time_6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_7</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 5 -->
+		<dict>
+			<key>Key</key><string>time_8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_9</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 6 -->
+		<dict>
+			<key>Key</key><string>time_10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_11</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 7 -->
+		<dict>
+			<key>Key</key><string>time_12</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_13</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Sleep Pair 8 -->
+		<dict>
+			<key>Key</key><string>time_14</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>time_15</string>
+			<key>Value</key><string></string>
+		</dict>
+
+	<!--Reduce Screen Brightness: 0 = Never, 30 = 30 sec, 60 = 1 min, 300 = 5 min, etc.-->
+	<dict>
+		<key>Key</key><string>reduceBrightnessTimeInterval</string>
+		<key>Value</key><string>0</string>
+	</dict>
+	
+	<!--Apply Reduce Screen Brightness: 0.0 = Never, 1.1 = Always, 0.1 = if battery percentage is less than 10%, 0.2 = less than 20% ... 1.0 = less than 100%-->
+	<dict>
+		<key>Key</key><string>kp_applyReduceBrightness</string>
+		<key>Value</key><real>0.0</real>
+	</dict>
+
+	<!--Enable Auto-Lock -->
+	<dict>
+		<key>Key</key><string>allowAutoLock</string>
+		<key>Value</key><false/>
+	</dict>
+
+
+<!--Internet Access & Error Handling-->
+
+	<!--Requires Internet Access-->
+	<dict>
+		<key>Key</key><string>showConnectionProblemPage</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!--Alternate Homepage for Offline Use-->
+	<dict>
+		<key>Key</key><string>customConnectionProblemPage</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!--Allow Exceptions to HTTPS:// Security Protocols in WKWebView (WKWebView Only): 
+		0 = Always Show Prompt, 1 = Automatically (recommended only in restricted environments where all possible exceptions have been reviewed), 2 = Never (any page with certificate errors will not load) -->
+	<dict>
+		<key>Key</key><string>kp_promptToAllowHTTPSSecurityExceptionsInWKWebView</string>
+		<key>Value</key><integer>0</integer>
+	</dict>
+
+
+<!--Memory & Privacy-->
+
+	<!--Clear Cache on Homepage-->
+	<dict>
+		<key>Key</key><string>clearCache</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Clear Local Storage on Homepage-->
+	<dict>
+		<key>Key</key><string>kp_clearLocalStorageOnHomepage</string>
+		<key>Value</key><false/>
+	</dict>
+	
+	<!--Clear Cookies & Session Storage on Homepage-->
+	<dict>
+		<key>Key</key><string>clearCookies</string>
+		<key>Value</key><false/>
+	</dict>
+
+
+<!--Site Customization-->
+
+	<!--Site Version-->
+
+		<!--Custom User Agent String-->
+		<dict>
+			<key>Key</key><string>customUserAgentString</string>
+			<key>Value</key><string></string>
+		</dict>
+
+	<!--Enable Custom CSS-->
+	<dict>
+		<key>Key</key><string>injectCSSSnippetForSpecificURLEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Custom CSS Settings-->
+
+		<!--Custom CSS Group 1-->
+		<dict>
+			<key>Key</key><string>specificURLPattern1ForCSSFileName1</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName1ForURLPattern1</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 2-->
+		<dict>
+			<key>Key</key><string>specificURLPattern2ForCSSFileName2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName2ForURLPattern2</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 3-->
+		<dict>
+			<key>Key</key><string>specificURLPattern3ForCSSFileName3</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName3ForURLPattern3</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 4-->
+		<dict>
+			<key>Key</key><string>specificURLPattern4ForCSSFileName4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName4ForURLPattern4</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 5-->
+		<dict>
+			<key>Key</key><string>specificURLPattern5ForCSSFileName5</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName5ForURLPattern5</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 6-->
+		<dict>
+			<key>Key</key><string>specificURLPattern6ForCSSFileName6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName6ForURLPattern6</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 7-->
+		<dict>
+			<key>Key</key><string>specificURLPattern7ForCSSFileName7</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName7ForURLPattern7</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 8-->
+		<dict>
+			<key>Key</key><string>specificURLPattern8ForCSSFileName8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName8ForURLPattern8</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 9-->
+		<dict>
+			<key>Key</key><string>specificURLPattern9ForCSSFileName9</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName9ForURLPattern9</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Custom CSS Group 10-->
+		<dict>
+			<key>Key</key><string>specificURLPattern10ForCSSFileName10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>specificCSSFileName10ForURLPattern10</string>
+			<key>Value</key><string></string>
+		</dict>
+
+	<!--Insert Homepage URL Parameters as JavaScript Variables: 0 = On Homepage Only, 1 = Always, 2 = Never -->
+	<dict>
+		<key>Key</key><string>kp_insertHomepageURLParametersAsJavaScriptVariables</string>
+		<key>Value</key><integer>0</integer>
+	</dict>
+
+
+<!--JavaScript API-->
+
+	<!--Access JavaScript API: 0 = By Injection, 1 = By Import, 2 = Never -->
+	<dict>
+		<key>Key</key><string>accessJS_API</string>
+		<key>Value</key><integer>2</integer>
+	</dict>
+
+
+<!--Geolocation & Motion Detection-->
+
+	<!--Define Location Coordinates: 0.0 = Never, 1 = On App Launch, 2 = Continuously -->
+	<dict>
+		<key>Key</key><string>locationUpdateFrequency</string>
+		<key>Value</key><real>0.0</real>
+	</dict>
+
+	<!--Accelerometer Sensitivity: 0.06 = Very High, 0.1 = High, 0.2 = Medium, 0.4 = Low, 0.6 = Very Low, please note tags <real></real> must be used with this setting-->
+	<dict>
+		<key>Key</key><string>shakeSensibility</string>
+		<key>Value</key><real>0.1</real>
+	</dict>
+
+	<!--Motion Detection Reset Period-->
+	<dict>
+		<key>Key</key><string>motionResetPeriod</string>
+		<key>Value</key><integer>1</integer>
+	</dict>
+
+
+<!--Autofill-->
+
+	<!--Enable-->
+	<dict>
+		<key>Key</key><string>autofillingEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--Autofill Settings-->
+
+		<!--Autofill Group 1-->
+		<dict>
+			<key>Key</key><string>autofillingURL1</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin1</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword1</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID1</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID1</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 2-->
+		<dict>
+			<key>Key</key><string>autofillingURL2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID2</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID2</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 3-->
+		<dict>
+			<key>Key</key><string>autofillingURL3</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin3</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword3</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID3</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID3</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 4-->
+		<dict>
+			<key>Key</key><string>autofillingURL4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID4</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID4</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 5-->
+		<dict>
+			<key>Key</key><string>autofillingURL5</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin5</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword5</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID5</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID5</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 6-->
+		<dict>
+			<key>Key</key><string>autofillingURL6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID6</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID6</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 7-->
+		<dict>
+			<key>Key</key><string>autofillingURL7</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin7</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword7</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID7</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID7</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 8-->
+		<dict>
+			<key>Key</key><string>autofillingURL8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID8</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID8</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 9-->
+		<dict>
+			<key>Key</key><string>autofillingURL9</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin9</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword9</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID9</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID9</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Autofill Group 10-->
+		<dict>
+			<key>Key</key><string>autofillingURL10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLogin10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPassword10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingLoginID10</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>autofillingPasswordID10</string>
+			<key>Value</key><string></string>
+		</dict>
+
+
+<!--Printing-->
+
+	<!--Show Print Icon-->
+	<dict>
+		<key>Key</key><string>showPrintIcon</string>
+		<key>Value</key><false/>
+	</dict>
+	<!--AirPrint-->
+	<dict>
+		<key>Key</key><string>printEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--AirPrint Settings-->
+
+		<!--Print Quality: Standard = 0.0, Photo = 1, Greyscale = 2-->
+		<dict>
+			<key>Key</key><string>airPrint_PrintInfoOutputType</string>
+			<key>Value</key><real>0.0</real>
+		</dict>
+
+		<!--Allow Visitor to Set Number of Copies-->
+		<dict>
+			<key>Key</key><string>kp_airPrint_setNumberOfCopiesOption</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!--Allow Visitor to Set Page Range-->
+		<dict>
+			<key>Key</key><string>airPrint_pageRangeOption</string>
+			<key>Value</key><false/>
+		</dict>
+
+
+<!--Event Notifications-->
+
+	<!--Enable Event Notifications-->
+
+		<!--Power Supply Change-->
+		<dict>
+		  <key>Key</key><string>emailOnPower</string>
+		  <key>Value</key><false/>
+		</dict>
+
+		<!--Battery Level Change-->
+
+			<!--Battery Discharge to Lower Zone-->
+			<dict>
+				<key>Key</key><string>emailOnBatteryDischargeToLowerZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Battery Charge to Higher Zone-->
+			<dict>
+				<key>Key</key><string>emailOnBatteryChargeToHigherZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Low %: undefined = -1, '10%' = 10, '50%' = 50 -->
+			<dict>
+				<key>Key</key><string>lowZoneLevel</string>
+				<key>Value</key><integer>-1</integer>
+			</dict>
+
+			<!--Notify when Unplugged (Normal Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenUnpluggedInNormalZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Notify when Charging (Normal Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenChargingInNormalZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Critical %: undefined = -1, '10%' = 10, '50%' = 50 -->
+			<dict>
+				<key>Key</key><string>criticalZoneLevel</string>
+				<key>Value</key><integer>-1</integer>
+			</dict>
+
+			<!--Notify when Unplugged (Low Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenUnpluggedInLowZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Notify when Charging (Low Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenChargingInLowZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Notify when Unplugged (Critical Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenUnpluggedInCriticalZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+			<!--Notify when Charging (Critical Zone)-->
+			<dict>
+				<key>Key</key><string>emailWhenChargingInCriticalZone</string>
+				<key>Value</key><false/>
+			</dict>
+
+		<!--Remote Update of Settings-->
+		<dict>
+			<key>Key</key><string>emailOnRemoteSettingsChange</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!--Update of Local Files-->
+		<dict>
+			<key>Key</key><string>emailOnContentUpdate</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!--Motion Detection-->
+		<dict>
+			<key>Key</key><string>emailOnAccelTrigger</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!--Switch between Cellular Data &amp; WiFi-->
+		<dict>
+			<key>Key</key><string>emailOnChangeNetworkReachabilityStatus</string>
+			<key>Value</key><false/>
+		</dict>
+
+	<!--Send Event Notifications Through: 0 = SMTP Email Server, 1 = Zapier Webhook-->
+	<dict>
+		<key>Key</key><string>kp_sendEventNotificationsThrough</string>
+		<key>Value</key><integer>0</integer>
+	</dict>
+
+	<!--SMTP Server Settings-->
+
+		<!--From Email-->
+		<dict>
+			<key>Key</key><string>smtpFromEmail</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--To Email-->
+		<dict>
+			<key>Key</key><string>smtpToEmail</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--SMTP Server-->
+		<dict>
+			<key>Key</key><string>smtpServer</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--SMTP Ports-->
+		<dict>
+			<key>Key</key><string>smtpPorts</string>
+			<key>Value</key><string>25; 465; 587</string>
+		</dict>
+
+		<!--Requires Authentication-->
+		<dict>
+			<key>Key</key><string>smtpRequiresAuth</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!--User Name-->
+		<dict>
+			<key>Key</key><string>smtpUserName</string>
+			<key>Value</key><string></string>
+		</dict>
+
+		<!--Password-->
+		<dict>
+			<key>Key</key><string>smtpPassword</string>
+			<key>Value</key><string></string>
+	   </dict>
+
+	   <!--Enable SSL-->
+	   <dict>
+			<key>Key</key><string>smtpEnableSSL</string>
+			<key>Value</key><false/>
+	   </dict>
+
+	<!--Zapier Webhook URL-->
+	<dict>
+		<key>Key</key><string>kp_zapierDefaultZapURL</string>
+		<key>Value</key><string></string>
+	</dict>
+
+
+<!--Remote Update-->
+
+	<!--Remote Settings Control-->
+	
+		<!--Enable-->
+		<dict>
+			<key>Key</key><string>remoteSettingsEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+	
+		<!--XML File Location-->
+		<dict>
+			<key>Key</key><string>externalSettingsFile</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+		<!--Update Period (minutes)-->
+		<dict>
+			<key>Key</key><string>localSettingsUpdatePeriod</string>
+			<key>Value</key><string></string>
+		</dict>
+
+
+	<!--Remote Update of Local Files-->
+	
+		<!--Enable-->
+		<dict>
+			<key>Key</key><string>updateOfLocalFilesEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+	
+		<!--XML File Location-->
+		<dict>
+			<key>Key</key><string>localContentUpdateUrl</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+		<!--Update Period (minutes)-->
+		<dict>
+			<key>Key</key><string>localContentUpdatePeriod</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+		<!--Server Request Timeout Period (seconds)-->
+		<dict>
+			<key>Key</key><string>kp_serverRequestTimeoutPeriodForUpdateOfLocalFiles</string>
+			<key>Value</key><string>300</string>
+		</dict>
+
+
+	<!--Dropbox Synchronization-->
+	
+		<!--Note: Dropbox accounts cannot be linked to Kiosk Pro remotely. Account access must be authorized manually on the iPad.-->
+	
+		<!--Enable Dropbox-->
+		<dict>
+			<key>Key</key><string>dropboxSyncEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+	
+		<!--Clear Sync History: used to trigger a full sync of all content files with Dropbox, manually triggered under the 'Account Settings' panel
+		<dict>
+			<key>Key</key><string>kp_setting_command_clearDropboxLocalHistory</string>
+			<key>Value</key><false/>
+		</dict>
+		-->
+		
+		<!--Shared Content Folder Settings-->
+	
+				<!--Shared Content Folder-->
+				<dict>
+					<key>Key</key><string>dropboxSharedContentFolderPath</string>
+					<key>Value</key><string>SharedContent</string>
+				</dict>
+	
+				<!--Restricted Sync List-->
+				<dict>
+					<key>Key</key><string>dropboxRestrictedListOfPaths</string>
+					<key>Value</key><string></string>
+				</dict>
+	
+		<!--Unique Content Folder: setting name automatically set based on the unique iPad ID configured at the top of Kiosk Pro settings-->
+	
+		<!--Log Sync Sessions-->
+		<dict>
+			<key>Key</key><string>dropboxLogSyncSessions</string>
+			<key>Value</key><true/>
+		</dict>
+
+	<!--Update Policy: 0 = Apply Immediately, 1 = Delay While Idle Timer is Active-->
+	<dict>
+		<key>Key</key><string>kp_remoteUpdatePolicy</string>
+		<key>Value</key><integer>1</integer>
+	</dict>
+	
+	<!--Show Update Indicator-->
+	<dict>
+		<key>Key</key><string>kp_showRemoteUpdateIndicator</string>
+		<key>Value</key><true/>
+	</dict>
+	
+	<!--Update Indicator Text-->
+	<dict>
+		<key>Key</key><string>kp_remoteUpdateIndicatorMessage</string>
+		<key>Value</key><string>Updating. . .</string>
+	</dict>
+
+
+<!--Remote Management Server-->
+
+	<!--Enable-->
+	<dict>
+		<key>Key</key><string>enabledKWC</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!--The following settings are commented out to prevent accidental overwrite of a kiosk identifier. See 'Commenting' at the top to enable. -->
+
+	<!--Site Name
+	<dict>
+		<key>Key</key><string>KWC_SiteName</string>
+		<key>Value</key><string>Site</string>
+	</dict>
+	-->
+
+	<!--Kiosk Name
+	<dict>
+		<key>Key</key><string>KWC_KioskName</string>
+		<key>Value</key><string>Kiosk</string>
+	</dict>
+	-->
+
+	<!--Unit Name
+	<dict>
+		<key>Key</key><string>KWC_UnitName</string>
+		<key>Value</key><string>Unit</string>
+	</dict>
+	-->
+
+	<!--Heartbeat Interval (minimum 5 minutes): 0 = Disabled, 5 = 5 min, 60 = 1 hour, etc.-->
+	<dict>
+		<key>Key</key><string>KWC_HeartbeatInterval</string>
+		<key>Value</key><string>30</string>
+	</dict>
+
+	<!--Send Visitor Session & Navigation Data-->
+	<dict>
+		<key>Key</key><string>KWC_sendingUsageStatistics</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!--XML Filename for Remote Settings Control-->
+	<dict>
+		<key>Key</key><string>KWC_xmlFilenameForRemoteSettingsControl</string>
+		<key>Value</key><string>settings.xml</string>
+	</dict>
+
+	<!--Notification Events-->
+	
+		<!--Note for all Notification Events: 0 = None, 4 = Info, 2 = Warning, 1 = Error-->
+
+		<!--Power-->
+
+			<!--On-->
+			<dict>
+				<key>Key</key><string>logPowerOn</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+			<!--Off-->
+			<dict>
+				<key>Key</key><string>logPowerOff</string>
+				<key>Value</key><integer>2</integer>
+			</dict>
+
+		<!--Battery-->
+
+			<!--Send Battery Events: 10 = Every 10%, 1 = Every 1%-->
+			<dict>
+				<key>Key</key><string>kwc_sendBatteryEventsEvery</string>
+				<key>Value</key><integer>10</integer>
+			</dict>
+			
+			<!--Trigger Percentage: 90 = 90%, 80 = 80%, 70 = 70%, etc.-->
+			<dict>
+				<key>Key</key><string>logBatteryTriggerPercentage</string>
+				<key>Value</key><integer>50</integer>
+			</dict>
+
+			<!--Above Trigger Percentage-->
+			<dict>
+				<key>Key</key><string>logBatteryAboveTriggerPercentage</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+			<!--Below Trigger Percentage-->
+			<dict>
+				<key>Key</key><string>logBatteryBelowTriggerPercentage</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+
+		<!--Night Mode-->
+
+			<!--Dimmed Screen-->
+			<dict>
+				<key>Key</key><string>logNightModeDimmedScreen</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+			<!--Undimmed Screen-->
+			<dict>
+				<key>Key</key><string>logNightModeUndimmedScreen</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+		<!--App Status-->
+
+			<!--App Launched-->
+			<dict>
+				<key>Key</key><string>logRestartPlanned</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+		<!--Settings Update-->
+
+			<!--Download Successful and Settings Applied-->
+			<dict>
+				<key>Key</key><string>logUpdateSettingsSuccessful</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+			<!--Download Failed-->
+			<dict>
+				<key>Key</key><string>logUpdateSettingsFailed</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+
+			<!--Manual Update Occured-->
+			<dict>
+				<key>Key</key><string>logUpdateSettingsManual</string>
+				<key>Value</key><integer>0</integer>
+			</dict>
+
+		<!--Content Update-->
+
+			<!--Download Successful-->
+			<dict>
+				<key>Key</key><string>logContentUpdateDownloadSuccessful</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+			<!--Download Failed-->
+			<dict>
+				<key>Key</key><string>logContentUpdateDownloadFailed</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+
+		<!--Motion-->
+
+			<!--Detected-->
+			<dict>
+				<key>Key</key><string>logMotionDetected</string>
+				<key>Value</key><integer>2</integer>
+			</dict>
+
+			<!--No Longer Detected-->
+			<dict>
+				<key>Key</key><string>logMotionNoLongerDetected</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+		<!--Printer-->
+
+			<!--AirPrint Printer Offline Status Detected-->
+			<dict>
+				<key>Key</key><string>kp_airPrinter_offlineStatusDetected</string>
+				<key>Value</key><integer>2</integer>
+			</dict>
+
+			<!--AirPrint Printer Online Status Detected-->
+			<dict>
+				<key>Key</key><string>kp_airPrinter_onlineStatusDetected</string>
+				<key>Value</key><integer>4</integer>
+			</dict>
+
+		<!--Server Version-->
+
+			<!--Incompatibility Detected-->
+			<dict>
+				<key>Key</key><string>logServerVersionIncompatibilityDetected</string>
+				<key>Value</key><integer>0</integer>
+			</dict>
+
+
+<!--Volume cannot be controlled through remote settings controls as Apple does not provide a public API for this functionality.-->
+
+
+<!--Screen Brightness-->
+
+	<!--Screen Brightness: maximum screen brightness = 1, minimum = 0; setting must be between 1 and 0 -->
+	<dict>
+		<key>Key</key><string>manualControlOfBrightness</string>
+		<key>Value</key><real>1</real>
+	</dict>
+
+
+<!-- Advanced Settings -->
+
+	<!-- Settings in this section are commented out as they should only be used if specifically needed. See 'Commenting' at the top to enable. -->
+
+	<!--Troubleshooting-->
+
+			<!--Log App Events
+			<dict>
+				<key>Key</key><string>kp_logMode</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+			<!--Log WebKit Requests
+			<dict>
+				<key>Key</key><string>kp_logAllWebKitRequests</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+			<!--Log Remote Management Server Events
+			<dict>
+				<key>Key</key><string>KWC_LogClientEvents</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+			<!--Log Remote Management Server Communications
+			<dict>
+				<key>Key</key><string>KWC_LogOutcomingXMLDocuments</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+			
+	<!--Browser Engine-->
+
+			<!--Browser Engine: 0 = UIWebView, 1 = WKWebView
+			<dict>
+				<key>Key</key><string>kp_browserEngine</string>
+				<key>Value</key><integer>1</integer>
+			</dict> -->
+			
+			<!-- Cookie Acceptance Policy (UIWebView Only): 0 = Never Accept, 1 = Accept From Visited, 2 = Always Accept
+			<dict>
+				<key>Key</key><string>cookieAcceptPolicy</string>
+				<key>Value</key><integer>1</integer>
+			</dict> -->
+			
+			<!--Cache Source (UIWebView only, requires app restart to apply)
+				0 = Kiosk Pro Cache, 1 = Native UIWebView Cache, 2 = Never Cache (may result in slower performance) 
+			<dict>
+				<key>Key</key><string>kp_cacheSource</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+			-->
+
+			<!--Only Notify Browser of Server Redirection Events (UIWebView only)
+			<dict>
+				<key>Key</key><string>kp_notifyWebViewAboutAllRedirections</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+			
+			
+	<!--Interaction-->
+
+			<!--Disable Touch Callouts
+			<dict>
+				<key>Key</key><string>_kp_disableDefaultCalloutShownWhenTouchAndHoldTarget_</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+			<!--Prevent iOS Drag & Drop
+			<dict>
+				<key>Key</key><string>_kp_disable_iOS_DragAndDrop_</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+			<!--Preload Homepage Behind Screensaver
+			<dict>
+				<key>Key</key><string>kp_preloadHomepageBehindScreensaver</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+			<!--Show Keyboard Automatically on Focus Event
+			<dict>
+				<key>Key</key><string>kp_showKeyboardAutomaticallyOnFocusEvent</string>
+				<key>Value</key><false/>
+			</dict>
+			-->
+
+
+	<!--Navigation-->
+
+			<!--Screen Asynchronous Requests with Allowed & Restricted Domains
+			<dict>
+				<key>Key</key><string>kp_allowRestrictAsynchronousURLRequests</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+	
+	<!-- Internet Access & Error Handling -->
+	
+			<!--Internet Connection Timeout Interval, [0.1...60] (seconds)
+			<dict>
+				<key>Key</key><string>kp_internetConnection_fromOffline_startCheckTimeoutInterval</string>
+				<key>Value</key><string>0.1</string>
+			</dict>
+			-->
+	
+	
+	<!--Memory & Privacy-->
+
+			<!--Clear Data on Relaunch
+			<dict>
+				<key>Key</key><string>kp_clearAppDataOnRelaunch</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+			
+			<!--Share Crash Logs with Developer (0 = Automatically, 1 = Do not share, 2 = Request permission on launch)
+			<dict>
+				<key>Key</key><string>kp_collectCrashLogsForAnalysisOption</string>
+				<key>Value</key><integer>0</integer>
+			</dict>
+			-->
+
+
+	<!--Remote Management Server-->
+
+			<!--Analytics > Track Asynchronous Requests When Possible (WKWebView only)
+			<dict>
+				<key>Key</key><string>kp_trackAsynchronousRequestsWhenPossible</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+			<!--Server Version
+			<dict>
+				<key>Key</key><string>KWC_ServerMinRequiredVersion</string>
+				<key>Value</key><string>040701</string>
+			</dict>
+			-->
+
+			<!--Request Timeout Interval [60..3900] (seconds)
+			<dict>
+				<key>Key</key><string>kwc_request_timeout</string>
+				<key>Value</key><string>300</string>
+			</dict>
+			-->
+
+
+	<!--Temporary / Beta-->
+
+			<!--Transform Links for Guided Access
+			<dict>
+				<key>Key</key><string>kp_transformLinksForGuidedAccess</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+			<!--Trigger Change Event After Autofill
+			<dict>
+				<key>Key</key><string>triggerOnChangeEventForAutofilling</string>
+				<key>Value</key><true/>
+			</dict>
+			-->
+
+
+	<!--Deprecated Features-->
+
+			<!--Allowed Link Path Depth from Homepage
+			<dict>
+				<key>Key</key><string>linksDepth</string>
+				<key>Value</key><string></string>
+			</dict>
+			-->
+
+
+	<!--XML Only Settings-->
+
+		<!--Generate Unique iPad ID 
+			The following pair of settings are used for updating kiosks in the field that were intially set up without a Unique iPad ID, but now need one for identification.
+			For more information, visit: http://www.kioskproapp.com/set-unique-id-remotely 
+		<dict>
+			<key>Key</key><string>kp_setting_command_generateKioskID</string>
+			<key>Value</key><string></string>
+		</dict>
+		<dict>
+			<key>Key</key><string>kp_setting_command_sendContextInfo</string>
+			<key>Value</key><string></string>
+		</dict>
+		-->
+		
+		<!--Allow Tabbing Between Inputs in UIWebView
+			For more information, visit: http://docs.kioskproapp.com/article/880-xml-only-settings#tabbing-between-inputs
+		<dict>
+			<key>Key</key><string>kp_enableDropdownsForiOS8</string>
+			<key>Value</key><true/>
+		</dict>
+		-->
+		
+		<!--Reload Browser After Sleep
+			For more information, visit: http://docs.kioskproapp.com/article/880-xml-only-settings#reload-browser-after-sleep 
+		<dict>
+			<key>Key</key><string>kp_recoveryBrowserAfterSleep</string>
+			<key>Value</key><false/>
+		</dict>
+		-->
+		
+		<!--Reload Browser After Sleep if Page Title Is Undefined
+			For more information, visit: http://docs.kioskproapp.com/article/880-xml-only-settings#reload-browser-after-sleep-if-no-title 
+		<dict>
+			<key>Key</key><string>kp_wkwebviewCrashRecovery</string>
+			<key>Value</key><false/>
+		</dict>
+		-->
+
+</array>
+</dict>
+</plist>
